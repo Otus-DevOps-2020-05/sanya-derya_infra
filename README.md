@@ -1,3 +1,20 @@
+# Homework № 4 cloud-testapp
+ - Установлен и настрое yc CLI;
+ - Создан хост с помощью CLI;
+ - На хосте установлены ruby, MongoDB;
+ - Произведен деплой тестового приложенния;
+   testapp_IP = 84.201.172.73
+   testapp_port = 9292
+ Команда CLI с использованием метаданных пользователя:
+ yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata-from-file user-data=./startup_script.yaml \
+  --metadata serial-port-enable=1 \
+
 # Homework № 3 Cloud-bastion
   Подключение к someinternalhost в одну строку:
  ssh -i ~/.ssh/appuser -A -tt appuser@84.201.171.110 ssh -tt 10.128.0.17
