@@ -1,7 +1,6 @@
 {
  "folder_id": "sfdsdpofdfwpoe",
  "source": "ubuntu-1604-lts",
- "service_acc_key": "/home/deriabin/key/key.json",
  "disk_size": "11",
  "platform_id": "standard-vx"
 }
